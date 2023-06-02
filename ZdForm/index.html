@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" >
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <form action="get" class="w-25" onsubmit=" Calculate(event);">
+            <div>
+                <label for="bucket" class="form-label w-75"> Type of ice-cream cone:
+                    <div>
+                        <input class="form-check-input" value="Standart" required type="radio" name="cone" id="cone1">
+                        <label class="form-check-label" for="cone1">Standart</label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" value="Chocolate" type="radio" name="cone" id="cone2">
+                        <label class="form-check-label" for="cone2">Chocolate</label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" value="Strawberry" type="radio" name="cone" id="cone3">
+                        <label class="form-check-label" for="cone3">Strawberry</label>
+                    </div>
+                    <!-- <select name="bucket" id="bucket" class="form-select">
+                        <option selected>Standart</option>
+                        <option>Chocolate</option>
+                        <option>Strawberry</option>
+                    </select> -->
+                </label>
+            </div>
+            <div>
+                <label for="flavour" class="form-label w-75">
+                    Choose flavour:
+                    <!-- <div>
+                        <input class="form-check-input" type="radio" name="flavour" id="flavour1">
+                        <label class="form-check-label" for="flavour1">Chocolate</label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="flavour" id="flavour2">
+                        <label class="form-check-label" for="flavour2">Strawberry</label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="flavour" id="flavour3">
+                        <label class="form-check-label" for="flavour3">Vanilla</label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="flavour" id="flavour4">
+                        <label class="form-check-label" for="flavour4">Cookies & Cream</label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="flavour" id="flavour5">
+                        <label class="form-check-label" for="flavour5">Mint Chocolate Chip</label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="flavour" id="flavour6">
+                        <label class="form-check-label" for="flavour6">Banana</label>
+                    </div> -->
+                    <select required name="flavour" id="flavour" class="form-select">
+                        <option value="25">Chocolate</option>
+                        <option>Strawberry</option>
+                        <option>Vanilla</option>
+                        <option>Cookies & Cream</option>
+                        <option>Mint Chocolate Chip</option>
+                        <option>Banana</option>
+                    </select>
+                </label>
+            </div>
+            <div >
+                <label for="balls" class="form-label w-75">
+                    Quantity ice-cream balls:
+                    <div>
+                        <input required class="form-check-input" type="radio" value="1" name="balls" id="balls1">
+                        <label class="form-check-label" for="balls1">1 ball</label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" value="2" name="balls" id="balls2">
+                        <label class="form-check-label" for="balls2">2 balls</label>
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" value="3" name="balls" id="balls3">
+                        <label class="form-check-label" for="balls3">3 balls</label>
+                    </div>
+                    <!-- <select name="balls" id="balls"  class="form-select">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select> -->
+                </label>
+            </div>
+            <div>
+                <button class="btn btn-success w-75" >Buy</button>
+            </div>
+        </form>
+        <script type="text/javascript">
+            function Calculate(e){
+                e.preventDefault();
+                form = e.target;
+                // console.log("dsad");
+                let balls = document.querySelector('input[name="balls"]:checked').value;
+                console.log(form.cone.value);
+                console.log(form.flavour.options[form.flavour.selectedIndex].value);
+                console.log(form.balls.value);
+                
+                return false;
+            }
+        </script>
+    </div>
+</body>
+</html>
