@@ -1,0 +1,21 @@
+*{
+    color:rgb(237, 237, 250);  
+    font-family: Segoe UI,SegoeUI,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-weight: bold;
+}
+.main{
+    width: 50%;
+    margin-left: 35%;
+    margin-top: 2%;
+    
+}
+option{
+    color: black;
+    font-weight: normal;
+}
+body{
+    background-image: url('https://img.freepik.com/free-photo/top-view-cones-ice-cream-table_23-2148421970.jpg?w=1060&t=st=1686660821~exp=1686661421~hmac=629172bf7ad629c21f3c2e48cf7e95ed006a4d4e0a4e713c93760ec7e7a29c97');
+    background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
